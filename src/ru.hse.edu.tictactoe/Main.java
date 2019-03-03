@@ -5,7 +5,9 @@ public class Main {
     public static void main(String[] args) {
         int i, j, k;
         Model b = new Model();
+        b.setCell(0,2,0,2);
         b.setCell(1,1,1,2);
+        b.setCell(2,0,2,2);
 
         for (i = 0; i < 3; i++) {
             for (j = 0; j < 3; j++) {
@@ -15,5 +17,6 @@ public class Main {
             }
             System.out.println();
         }
+        System.out.println(b.haswinner());
     }
 }
