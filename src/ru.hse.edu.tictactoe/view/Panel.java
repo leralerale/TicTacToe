@@ -47,10 +47,10 @@ public class Panel extends JPanel {
 
 
 
-private void updatePanel(ArrayList <ArrayList<CellState>> board) {
+private void updatePanel(int[][] board) {
         for (int j = 0; j < 8; ++j) {
             for (int k = 0; k < 8; ++k) {
-                    this.board.get(j).get(k).setState(board.get(j).get(k));
+                this.board.get(j).get(k).setState(CellState.getStateByNumber(board[j][k]));
             }
         }
 
