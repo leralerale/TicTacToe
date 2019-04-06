@@ -60,6 +60,12 @@ public class Board extends JPanel implements Boardable
 
     }
 
+    public void setListeners(BoardListener listener) {
+        for (Panel b:this.board) {
+            b.setListeners(listener);
+        }
+    }
+
     /*@Override
     public ArrayList<ArrayList<CellState>> getBoard() {
         return this.board;

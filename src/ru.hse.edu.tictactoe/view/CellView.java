@@ -6,7 +6,6 @@ import java.awt.event.MouseEvent;
 
 public class CellView extends JLabel {
 
-    private final int k;
 
     private BoardListener listener;
     private CellPressedEvent event;
@@ -19,7 +18,7 @@ public class CellView extends JLabel {
     private ImageIcon redIcon;
     private ImageIcon greenIcon;
 
-    public CellView(CellState state, int x, int y, int k){
+    public CellView(CellState state, int x, int y){
         this.state = state;
         this.x = x;
         this.y = y;
@@ -28,7 +27,7 @@ public class CellView extends JLabel {
         greenIcon = new ImageIcon(CellView.class.getResource("/green70px.png"));
         this.setVisible(true);
         this.changeView();
-        this.event = new CellPressedEvent(this, this.x, this.y, this.k);
+        this.event = new CellPressedEvent(this, this.x, this.y);
         this.addMouseListener(new CellView.MouseClickListener());
     }
 

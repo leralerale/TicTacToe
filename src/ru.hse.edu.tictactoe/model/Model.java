@@ -4,7 +4,7 @@ package ru.hse.edu.tictactoe.model;
 public class Model {
     private int a[][][];
 
-    Model() {
+    public Model() {
         this.a = new int[3][3][3];
 
     }
