@@ -1,6 +1,5 @@
 package ru.hse.edu.tictactoe.model;
 
-import java.util.ArrayList;
 
 public class Model {
     private int a[][][];

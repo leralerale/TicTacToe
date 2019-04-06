@@ -3,14 +3,22 @@ package ru.hse.edu.tictactoe.view;
 public enum CellState {
 
 
-    White(0), Red(1), Green(2);
+    White,
+    Red,
+    Green;
 
     private int state;
 
-    CellState(int state){
-        this.state = state;
+    CellState(){
+        this.state = ordinal();
 
     }
 
-    public int getState(){ return state;}
+    public static CellState getStateByNumber(int num) throws IllegalArgumentException {
+            try {
+                return CellState.values()[num];
+            } catch(ArrayIndexOutOfBoundsException e) {
+                throw new IllegalArgumentException("Unknown enum value :"+ num);
+            }
+    }
 }

@@ -54,7 +54,9 @@ public class Board extends JPanel implements Boardable
 
 
     public void update(int[][][] stateMatrix3D){
-
+        for (int i=0; i<3; i++){
+            board.get(i).update(stateMatrix3D[i]);
+        }
 
     }
 
