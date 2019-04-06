@@ -1,4 +1,4 @@
-package ru.hse.edu.tictactoe;
+package ru.hse.edu.tictactoe.view;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;

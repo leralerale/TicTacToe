@@ -1,5 +1,7 @@
 package ru.hse.edu.tictactoe;
 
+import ru.hse.edu.tictactoe.view.MainWindow;
+
 import java.awt.*;
 
 public class Main {
