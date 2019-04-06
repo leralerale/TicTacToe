@@ -17,6 +17,7 @@ public class MainWindow extends JFrame {
     int height = 800;
     int xScr = screenSize.width / 2 - (width / 2);//центрируем окно
     int yScr = screenSize.height / 2 - (height / 2);
+    Board board;
 
 
     public MainWindow() {
@@ -75,102 +76,19 @@ public class MainWindow extends JFrame {
         this.setResizable(true);//делает активным стандартную кнопку раскрытия окна на весь экран или его сворачивание
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        //Color myColor = new Color(255, 100, 100);
+        this.board = new Board(3,3);
+        this.add(this.board);
 
-        //int f=3, v=3;
-
-
-
-
-//        GridBagLayout gbag = new GridBagLayout();
-//        GridBagConstraints gbc = new GridBagConstraints();
-//        setLayout(new GridLayout(3,3));
-//        JPanel binv0 = new JPanel();
-//        JPanel binv1 = new JPanel();
-//        JPanel jp3 = new Panel(3);
-//        JPanel binv3 = new JPanel();
-//        JPanel jp2 = new Panel(2);
-//        JPanel binv4 = new JPanel();
-//        JPanel jp1 = new Panel(1);
-//        JPanel binv5 = new JPanel();
-//        JPanel binv6 = new JPanel();
-
-//        gbc.weightx = 1.0;
-//        gbc.ipadx = 200;
-//        gbc.ipady = 200;
-//        gbc.gridwidth = 200;
-//        gbag.setConstraints(binv0, gbc);
-//        gbc.gridwidth = GridBagConstraints.RELATIVE;
-//        gbag.setConstraints(binv1, gbc);
-//        gbc.gridwidth = GridBagConstraints.REMAINDER;
-//        gbag.setConstraints(jp3, gbc);
-//
-//        gbc.weighty = 1.0;
-//        gbc.gridwidth = 250;
-//        gbag.setConstraints(binv3, gbc);
-//        gbc.gridwidth = GridBagConstraints.RELATIVE;
-//        gbag.setConstraints(jp2, gbc);
-//        gbc.gridwidth = GridBagConstraints.REMAINDER;
-//        gbag.setConstraints(binv4, gbc);
-//
-//        gbc.weighty = 2.0;
-//        gbc.gridwidth = 250;
-//        gbag.setConstraints(jp1, gbc);
-//        gbc.gridwidth = GridBagConstraints.RELATIVE;
-//        gbag.setConstraints(binv5, gbc);
-//        gbc.gridwidth = GridBagConstraints.REMAINDER;
-//        gbag.setConstraints(binv6, gbc);
-
-
-        this.add(new Board(3,3));
-
-
-//        this.add(jp3);
-//
-//        this.add(jp2);
-//
-//        this.add(jp1);
 
 
         setResizable(false);
     }
+
+
+    public void setBoardListeners(BoardListener listener) {this.board.setListeners(listener);}
 }
 
 
-        //
-        //
-
-
-        /*JButton[][] panels=new JButton[f][v];
-        for (int i=0; i<3; i++){
-            for (int j = 0; j < 3; j++) {
-                panels[i][j]=new JButton("Berton");
-                panels[i][j].setPreferredSize(new Dimension(300, 300));
-                jp1.add(panels[i][j]);
-                if (i==2-j){
-                    panels[i][j].setVisible(true);
-                } else {panels[i][j].setVisible(false);}
-
-            }}
-        JPanel jp1 = new JPanel() {
-            public void paint(Graphics graphics) {
-                graphics.setColor(myColor);
-
-            }
-        };
-        int b = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                JButton nb= new JButton(" Button " + b);
-                nb.setPreferredSize(new Dimension(100, 100));
-                jp1.add(nb);
-                ++b;
-            }
-        }
-        this.add(jp1, BorderLayout.CENTER);
-        jp1.setSize(300, 300);
-        jp1.setLayout(new GridLayout(3, 3));
-        */
 
 
 

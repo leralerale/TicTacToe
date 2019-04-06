@@ -28,7 +28,7 @@ public class Panel extends JPanel {
             for (int j = 0; j < 3; j++) {
                 board.add(new ArrayList<CellView>(3));
                 for (int k = 0; k < 3; k++) {
-                    ((ArrayList)this.board.get(j)).add(k, new CellView(CellState.White, i, j, k));
+                    ((ArrayList)this.board.get(j)).add(k, new CellView(CellState.White, i, j));
                     this.add((Component)((ArrayList)this.board.get(j)).get(k));
                 }
             }
@@ -38,9 +38,9 @@ public class Panel extends JPanel {
 
 
     public void setListeners(BoardListener listener) {
-        for (int j = 0; j < 8; ++j) {
-            for (int k = 0; k < 8; ++k) {
-                ((CellView) ((ArrayList) this.board.get(j)).get(k)).addCellPressedListener(listener);
+        for (int j = 0; j < 3; ++j) {
+            for (int k = 0; k < 3; ++k) {
+                this.board.get(j).get(k).addCellPressedListener(listener);
             }
         }
     }
