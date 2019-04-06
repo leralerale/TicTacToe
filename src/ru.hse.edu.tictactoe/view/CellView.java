@@ -11,25 +11,25 @@ public class CellView extends JLabel {
     private CellPressedEvent event;
 
     private CellState state;
-    private final int x;
-    private final int y;
+    private final int i;
+    private final int j;
     private final int k;
 
     private ImageIcon whiteIcon;
     private ImageIcon redIcon;
     private ImageIcon greenIcon;
 
-    public CellView(CellState state, int x, int y, int k){
+    public CellView(CellState state, int i, int j, int k){
         this.state = state;
-        this.x = x;
-        this.y = y;
+        this.i = i;
+        this.j = j;
         this.k = k;
         whiteIcon = new ImageIcon(CellView.class.getResource("/white70px.png"));
         redIcon = new ImageIcon(CellView.class.getResource("/red70px.png"));
         greenIcon = new ImageIcon(CellView.class.getResource("/green70px.png"));
         this.setVisible(true);
         this.changeView();
-        this.event = new CellPressedEvent(this, this.x, this.y, this.k);
+        this.event = new CellPressedEvent(this, this.i, this.j, this.k);
         this.addMouseListener(new CellView.MouseClickListener());
     }
 

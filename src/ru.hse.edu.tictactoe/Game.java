@@ -10,7 +10,10 @@ public class Game implements BoardListener {
 
     MainWindow win;
 
+    int currentPlayer;
+
     Game() {
+        this.currentPlayer = 1;
         model = new Model();
         win = new MainWindow();
         this.win.setBoardListeners(this);
@@ -19,6 +22,13 @@ public class Game implements BoardListener {
 
     @Override
     public void cellPressed(CellPressedEvent e) {
-        this.win.update(model.makeTurn());
+        this.win.update(model.makeTurn(this.currentPlayer, e.getI(), e.getJ(), e.getK()));
+        System.out.println(this.model.haswinner());
+        nextPlayer();
+    }
+
+    private void nextPlayer(){
+        if (currentPlayer==1) currentPlayer=2;
+        else currentPlayer=1;
     }
 }

@@ -4,18 +4,18 @@ import java.util.EventObject;
 
 public class CellPressedEvent extends EventObject {
 
-    private int x;
-    private int y;
+    private int i;
+    private int j;
     private int k;
 
 
-    public CellPressedEvent(Object source, int x, int y, int k) {
+    public CellPressedEvent(Object source, int i, int j, int k) {
         super(source);
-        this.x = x;
-        this.y = y;
+        this.i = i;
+        this.j = j;
         this.k = k;
     }
-    public int getX(){return x;}
-    public int getY(){return y;}
+    public int getI(){return i-1;}
+    public int getJ(){return j;}
     public int getK(){return k;}
 }
