@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Model {
     private int a[][][];
 
-    Model() {
+    public Model() {
         this.a = new int[3][3][3];
 
     }
