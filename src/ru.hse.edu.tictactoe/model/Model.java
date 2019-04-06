@@ -4,9 +4,17 @@ package ru.hse.edu.tictactoe.model;
 public class Model {
     private int a[][][];
 
+
+
     public Model() {
         this.a = new int[3][3][3];
 
+    }
+
+    public int[][][] makeTurn(int player, int i, int j, int k){
+
+        setCell(i, j, k, player);
+        return a;
     }
 
     public void setCell(int i, int j, int k, int c) {

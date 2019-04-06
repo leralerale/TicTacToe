@@ -19,6 +19,6 @@ public class Game implements BoardListener {
 
     @Override
     public void cellPressed(CellPressedEvent e) {
-        
+        this.win.update(model.makeTurn());
     }
 }
