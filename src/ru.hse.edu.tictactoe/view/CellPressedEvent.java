@@ -9,11 +9,11 @@ public class CellPressedEvent extends EventObject {
     private int k;
 
 
-    public CellPressedEvent(Object source, int x, int y) {
+    public CellPressedEvent(Object source, int x, int y, int k) {
         super(source);
         this.x = x;
         this.y = y;
-        //this.k = k;
+        this.k = k;
     }
     public int getX(){return x;}
     public int getY(){return y;}

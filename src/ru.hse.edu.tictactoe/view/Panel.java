@@ -28,7 +28,7 @@ public class Panel extends JPanel {
             for (int j = 0; j < 3; j++) {
                 board.add(new ArrayList<CellView>(3));
                 for (int k = 0; k < 3; k++) {
-                    ((ArrayList)this.board.get(j)).add(k, new CellView(CellState.White, i, j));
+                    this.board.get(j).add(k, new CellView(CellState.White, i, j, k));
                     this.add((Component)((ArrayList)this.board.get(j)).get(k));
                 }
             }
