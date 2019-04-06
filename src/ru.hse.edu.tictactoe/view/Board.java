@@ -60,6 +60,9 @@ public class Board extends JPanel implements Boardable
 
     }
 
+
+
+
     public void setListeners(BoardListener listener) {
         for (Panel b:this.board) {
             b.setListeners(listener);

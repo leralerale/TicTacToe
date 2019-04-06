@@ -85,6 +85,9 @@ public class MainWindow extends JFrame {
     }
 
 
+    public void update(int[][][] stateMatrix3D){
+        this.board.update(stateMatrix3D);
+    }
     public void setBoardListeners(BoardListener listener) {this.board.setListeners(listener);}
 }
 
