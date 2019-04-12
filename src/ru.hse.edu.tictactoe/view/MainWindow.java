@@ -42,14 +42,15 @@ public class MainWindow extends JFrame {
 
         newItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                /*Object[] options = { "Да", "Нет!" };
+                Object[] options = { "Да", "Нет!" };
 
                 int result = JOptionPane.showOptionDialog(null,"Do you really want start a new game?","Confirm",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
                         null, options, options[0]);
 
-                if (result == JOptionPane.YES_OPTION)*/
+                if (result == JOptionPane.YES_OPTION)
                 {Game game = new Game();
                 setVisible(false);}
+
 
 
             }
