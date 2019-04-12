@@ -25,19 +25,21 @@ public class Game implements BoardListener {
 
     @Override
     public void cellPressed(CellPressedEvent e) {
+        if (this.model.getCell(e.getI(), e.getJ(), e.getK())==0){
         this.win.update(model.makeTurn(this.currentPlayer, e.getI(), e.getJ(), e.getK()));
         System.out.println(this.model.haswinner());
         nextPlayer();
-        if ((this.model.haswinner()==1)||(this.model.haswinner()==2)){
-            Object[] options = { "Да", "Нет!" };
+        if ((this.model.haswinner()==1)||(this.model.haswinner()==2)) {
+            Object[] options = {"Yes", "No"};
 
-            int result = JOptionPane.showOptionDialog(null,this.model.haswinner()+" player win!"+"\n"+"Do you want start a new game?","Confirm",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
+            int result = JOptionPane.showOptionDialog(null, this.model.haswinner() + " player win!" + "\n" + "Do you want start a new game?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                     null, options, options[0]);
 
-            if (result == JOptionPane.YES_OPTION)
-            {Game game = new Game();
-            win.setVisible(false);}
-            else System.exit(0);
+            if (result == JOptionPane.YES_OPTION) {
+                Game game = new Game();
+                win.setVisible(false);
+            } else System.exit(0);
+        }
         }
     }
 
