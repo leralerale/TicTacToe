@@ -12,12 +12,13 @@ public class Game implements BoardListener {
 
     int currentPlayer;
 
-    Game() {
+    public Game() {
         this.currentPlayer = 1;
         model = new Model();
         win = new MainWindow();
         this.win.setBoardListeners(this);
     }
+
 
 
     @Override

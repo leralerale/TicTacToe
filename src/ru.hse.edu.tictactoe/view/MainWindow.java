@@ -1,6 +1,8 @@
 package ru.hse.edu.tictactoe.view;
 
 
+import ru.hse.edu.tictactoe.Game;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,11 +20,12 @@ public class MainWindow extends JFrame {
     int xScr = screenSize.width / 2 - (width / 2);//центрируем окно
     int yScr = screenSize.height / 2 - (height / 2);
     Board board;
+    private ImageIcon qIcon;
 
 
     public MainWindow() {
         super("TicTacToe");
-
+        qIcon = new ImageIcon(MainWindow.class.getResource("/icq.png"));
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Game");
         menuBar.add(fileMenu);
@@ -40,7 +43,17 @@ public class MainWindow extends JFrame {
 
         newItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                System.out.println("ActionListener.actionPerformed : open");
+                Object[] options = { "Да", "Нет!" };
+
+
+                int result = JOptionPane.showOptionDialog(null,"Do you really want start a new game?","Confirm",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
+                        qIcon, options, options[0]);
+
+                if (result == JOptionPane.YES_OPTION)
+                {Game game = new Game();
+                setVisible(false);}
+
+
             }
         });
 
@@ -55,7 +68,6 @@ public class MainWindow extends JFrame {
         ruleItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 JFrame myWindow1 = new SimpleWindow("Rules");
-
                 myWindow1.setVisible(true);
             }
         });
