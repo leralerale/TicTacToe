@@ -25,6 +25,7 @@ public class Game implements BoardListener {
 
     @Override
     public void cellPressed(CellPressedEvent e) {
+        //totoro
         if (this.model.getCell(e.getI(), e.getJ(), e.getK())==0){
         this.win.update(model.makeTurn(this.currentPlayer, e.getI(), e.getJ(), e.getK()));
         System.out.println(this.model.haswinner());
