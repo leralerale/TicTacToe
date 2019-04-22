@@ -1,7 +1,8 @@
 package ru.hse.edu.tictactoe.view;
 
 
-import ru.hse.edu.tictactoe.Game;
+import ru.hse.edu.tictactoe.controller.BoardListener;
+import ru.hse.edu.tictactoe.controller.Game;
 
 import javax.swing.*;
 import java.awt.*;

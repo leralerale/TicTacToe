@@ -1,7 +1,6 @@
-package ru.hse.edu.tictactoe;
+package ru.hse.edu.tictactoe.controller;
 
 import ru.hse.edu.tictactoe.model.Model;
-import ru.hse.edu.tictactoe.view.BoardListener;
 import ru.hse.edu.tictactoe.view.CellPressedEvent;
 import ru.hse.edu.tictactoe.view.MainWindow;
 

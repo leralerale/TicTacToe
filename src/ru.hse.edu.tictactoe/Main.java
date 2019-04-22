@@ -1,6 +1,6 @@
 package ru.hse.edu.tictactoe;
 
-import ru.hse.edu.tictactoe.view.MainWindow;
+import ru.hse.edu.tictactoe.controller.Game;
 
 import java.awt.*;
 

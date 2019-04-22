@@ -1,4 +1,6 @@
-package ru.hse.edu.tictactoe.view;
+package ru.hse.edu.tictactoe.controller;
+
+import ru.hse.edu.tictactoe.view.CellPressedEvent;
 
 import java.util.EventListener;
 

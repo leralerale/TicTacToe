@@ -1,5 +1,7 @@
 package ru.hse.edu.tictactoe.view;
 
+import ru.hse.edu.tictactoe.controller.BoardListener;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;

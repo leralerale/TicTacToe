@@ -38,18 +38,18 @@ public class Model {
     }
 
     public int haswinner() {
-        if (cheklines()!=0)
-            return cheklines();
-        if (chekmaindiag()!=0)
-            return chekmaindiag();
-        if (cheksidediag()!=0)
-           return cheksidediag();
-        if (chekcubediag()!=0)
-            return chekcubediag();
+        if (cheсklines()!=0)
+            return cheсklines();
+        if (cheсkmaindiag()!=0)
+            return cheсkmaindiag();
+        if (cheсksidediag()!=0)
+           return cheсksidediag();
+        if (cheсkcubediag()!=0)
+            return cheсkcubediag();
         return 0;
     }
 
-    private int cheklines() {
+    private int cheсklines() {
         int i, j, k;
         for (i = 0; i < 3; i++)
             for (j = 0; j < 3; j++)
@@ -63,7 +63,7 @@ public class Model {
         return 0;
     }
 
-    private int chekmaindiag() {
+    private int cheсkmaindiag() {
 
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
@@ -78,7 +78,7 @@ public class Model {
         return 0;
     }
 
-    private int cheksidediag() {
+    private int cheсksidediag() {
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
                 for (int k = 0; k < 3; k++) {
@@ -93,7 +93,7 @@ public class Model {
         return 0;
     }
 
-    private int chekcubediag() {
+    private int cheсkcubediag() {
         int i, j, k;
         for (i = 0; i < 3; i++)
             for (j = 0; j < 3; j++)
