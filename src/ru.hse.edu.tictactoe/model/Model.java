@@ -8,14 +8,16 @@ public class Model {
 
     public Model() {
         this.a = new int[3][3][3];
-
     }
 
     public int[][][] makeTurn(int player, int i, int j, int k){
-
         setCell(i, j, k, player);
         return a;
     }
+    public int[][][] getBoard(){
+        return this.a;
+    }
+
 
     public void setCell(int i, int j, int k, int c) {
         this.a[i][j][k] = c;
@@ -109,4 +111,5 @@ public class Model {
                 }
         return 0;
     }
+
 }
