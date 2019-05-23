@@ -15,7 +15,7 @@ public class Game implements BoardListener {
     int currentPlayer;
 
     Bot bot = new Bot();
-    int mode;
+    int mode, k;
 
     static int PVP = 1;
     static int PVE = 2;
@@ -25,13 +25,30 @@ public class Game implements BoardListener {
         model = new Model();
         win = new MainWindow();
         win.setBoardListeners(this);
-        mode = Game.PVE;
+        Object[] options = {"Player vs Player", "Player vs Computer"};
+
+        int result = JOptionPane.showOptionDialog(null,  "Select game type." +
+                        "" + "\n" + "Have a good time!", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
+                null, options, options[0]);
+
+        if (result == JOptionPane.YES_OPTION) {
+            mode=Game.PVP;
+        } else
+            mode = Game.PVE;
     }
 
     private void newGame(){
         currentPlayer = 1;
         model = new Model();
-        mode = Game.PVE;
+        Object[] options = {"PvP", "PvE"};
+
+        int result = JOptionPane.showOptionDialog(null,  "With whom do you want compete?" + "\n" + "Have a good time!", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
+                null, options, options[0]);
+
+        if (result == JOptionPane.YES_OPTION) {
+            mode=Game.PVP;
+        } else
+            mode = Game.PVE;
         win.update(model.getBoard());
     }
 
